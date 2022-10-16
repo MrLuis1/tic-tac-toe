@@ -1,0 +1,67 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(114, 114, 215);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tablero {
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.celdas {
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.celdas.select {
+    background-color: rgb(70, 70, 133);;
+}
+
+.celdas:nth-child(3n){
+    border-right: none;
+}
+
+.celdas:nth-child(n+7){
+    border-bottom: none;
+}
+
+.mensaje {
+    font-size: 1.5rem;
+    color: yellow;
+}
+
+.game-restart {
+    margin-block-start: 3rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.game-restart:hover {
+    background-color: #fff;
+    color: #000;
+}
